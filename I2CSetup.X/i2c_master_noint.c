@@ -9,7 +9,7 @@
 #include "i2c_master_noint.h"
 
 void i2c_master_setup(void) {
-  I2C2BRG = 233;            // I2CBRG = [1/(2*Fsck) - PGD]*Pblck - 2 
+  I2C2BRG = 233;            // I2CBRG = [1/(2*Fsck) - PGD]*Pblck - 2, setting baudrate to 100kHz
                                     // look up PGD for your PIC32
                                     //  PGD Typically value is 104 ns for PIC32MX250F128B
   I2C2CONbits.ON = 1;               // turn on the I2C2 module
